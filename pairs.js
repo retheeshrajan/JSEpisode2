@@ -1,4 +1,4 @@
-/**************************************************************
+(/**************************************************************
 * pairs(names):
 *
 * - It accepts an array of names:
@@ -19,7 +19,25 @@
 ****************************************************************/
 function pairs(names) {
   // Your code goes here
+  let name1;
+  let name2;
+  let subarray = [];
+while (names.length > 1) {
+    name1 = names.getRandom();
+    name2 = names.getRandom();
+    subarray.push([name1, name2]);
 }
+if (names.length === 1)  {
+    name1 = names.getRandom();
+    subarray.push(name1);
+} else if (names.length === 0){
+    return names = []
+}
+return subarray; 
+}
+
+
+// console.log(pairs(['retheesh','sarah']));
 
 module.exports = pairs;
 
