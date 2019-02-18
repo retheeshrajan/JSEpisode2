@@ -58,14 +58,7 @@ function pairs(names) {
       if (name1===name2)
       {
         myArray.push(name1);
-        if (names.length===0)
-        {
-          ln=0;
-        }
-        else
-        {
-          ln=ln-1;
-        }
+        ln=ln-1;
       }
       else
       {
