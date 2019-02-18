@@ -68,15 +68,12 @@ function pairs(names) {
       }
       PArray.push(myArray);
       myArray=[];
-
-      
     }
   }
   else
   {
     names=[];
   }
-
   return PArray;
 }
 
