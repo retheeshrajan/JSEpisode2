@@ -54,7 +54,7 @@ function pairs(names) {
       else
       {
         name1=names.getRandom();
-        name2=name1;
+        //name2=name1;
         myArray.push(name1);
         ln=ln-1;
       }
@@ -92,6 +92,7 @@ module.exports = pairs;
 
 
 console.log(pairs(['Asis', 'Hamsa', 'Fawas', 'Mishmish', 'Hussein', 'Lailz', 'Mr Potato']));
-//console.log(pairs(['Asis', 'Hamsa', 'Fawas', 'Mishmish', 'Hussein', 'Lailz']));
-//console.log(pairs(['Asis', 'Hamsa']));
-//console.log(pairs(['Asis']));
+console.log(pairs(['Asis', 'Hamsa', 'Fawas', 'Mishmish', 'Hussein', 'Lailz']));
+console.log(pairs(['Asis', 'Hamsa']));
+console.log(pairs(['Asis']));
+console.log(pairs([]));
