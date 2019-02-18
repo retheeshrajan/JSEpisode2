@@ -15,8 +15,6 @@
 Array.prototype.getRandom = function () {
   return this.splice(Math.floor(Math.random()*this.length), 1)[0];
 }
-
-
 /**************************************************************
 * pairs(names):
 *
@@ -45,6 +43,7 @@ function pairs(names) {
     var ln = names.length;
     while(ln>0)
     {
+      
       if (ln>=2)
       {
         name1=names.getRandom();
@@ -53,26 +52,37 @@ function pairs(names) {
       else
       {
         name1=names.getRandom();
-        name1=name2;
+        name2=name1;
       }
       
-      if (name1!==name2)
+      if (name1===name2)
+      {
+        myArray.push(name1);
+        if (names.length===0)
+        {
+          ln=0;
+        }
+        else
+        {
+          ln=ln-1;
+        }
+      }
+      else
       {
         myArray.push(name1,name2);
         ln=ln-2;
       }
-      else
-      {
-        myArray.push(name1);
-        ln=ln-1;
-      }
+
       PArray.push(myArray);
       myArray=[];
+      name1='';
+      name2='';
+
     }
   }
   else
   {
-    names=[];
+    PArray=[];
   }
   return PArray;
 }
